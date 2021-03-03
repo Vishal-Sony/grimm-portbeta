@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+
+nav {
+  position: relative;
+  height: 10vh;
+  background: linear-gradient(
+    to bottom left,
+    /* #031875,
+    #1334a1,
+    #2c38d8b2,
+    #728fec7e*/ #7579e7,
+    #9ab3f5,
+    #a3d8f4,
+    #b9fffc
+  );
+}
+.items {
+  font-family: "M PLUS 1p", sans-serif;
+  position: fixed;
+  background: linear-gradient(
+    to bottom left,
+    /*#031875f3,
+    #1a3ba8e7,
+    #4e57d4ec,
+    #6277ebec*/ #7579e7,
+    #9ab3f5,
+    #a3d8f4,
+    #b9fffc
+  );
+  height: 100vh;
+
+  display: flex;
+  list-style: none;
+  width: 100%;
+  flex-direction: column;
+  clip-path: circle(0px at 50% 50%);
+  -webkit-clip-path: circle(0px at 50% 50%);
+  transition: all 1s ease-out;
+
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  z-index: 1;
+}
+
+.items.open {
+  clip-path: circle(1000px at 50% 50%);
+  -webkit-clip-path: circle(1000px at 50% 50%);
+  z-index: 1;
+}
+.grimm1.open {
+  display: none;
+}
+
+.items li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+}
+/*nav ani*/
+.line {
+  width: 30px;
+  height: 2px;
+
+  background: white;
+  margin: 5px;
+
+  /*a*/
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  border-radius: 9px;
+}
+.grimm {
+  position: fixed;
+  cursor: pointer;
+  right: 4%;
+  top: 4%;
+  transform: translate(-4%, -50%);
+  z-index: 2;
+
+  /*a*/
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.line1.open {
+  top: 0px;
+  margin-bottom: -13.5px;
+  -webkit-transform: rotate(125deg);
+  -moz-transform: rotate(125deg);
+  -o-transform: rotate(125deg);
+  transform: rotate(125deg);
+}
+.line2.open {
+  opacity: 0;
+  left: -60px;
+}
+.line3.open {
+  top: 0px;
+
+  -webkit-transform: rotate(-125deg);
+  -moz-transform: rotate(-125deg);
+  -o-transform: rotate(-125deg);
+  transform: rotate(-125deg);
+}
+
+.parallax1 {
+  font-family: "Righteous", cursive;
+  font-size: 60px;
+  background-image: linear-gradient(
+      rgba(79, 77, 231, 0.527),
+      rgba(255, 255, 255, 0.411)
+    ),
+    url("./img1.jpg");
+  min-height: 90vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 200px;
+  background-size: cover;
+}
+.parallax2 {
+  color: rgb(209, 213, 216);
+  font-family: "Righteous", cursive;
+  font-size: 60px;
+  background-image: linear-gradient(
+      rgba(79, 77, 231, 0.527),
+      rgba(255, 255, 255, 0.411)
+    ),
+    url("./img3.jpg");
+  min-height: 90vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 200px;
+  background-size: cover;
+}
+.const {
+  padding: 60px;
+  background-color: rgb(184, 184, 230);
+}
+.links {
+  display: flex;
+}
+.site {
+  padding-top: 10px;
+}
+
+/*bob*/
+
+.grimm1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fill 0.5s ease forwards 3.5s;
+  transition: all 1s ease-out 0.2s;
+
+  z-index: 0;
+}
+.first {
+  stroke-dasharray: 572px;
+  stroke-dashoffset: 572px;
+  animation: line-anim 2s ease forwards;
+}
+.second {
+  stroke-dasharray: 235px;
+  stroke-dashoffset: 235px;
+  animation: line-anim 2s ease forwards 0.3s;
+}
+.third {
+  stroke-dasharray: 180px;
+  stroke-dashoffset: 180px;
+  animation: line-anim 2s ease forwards 0.6s;
+}
+.fourth {
+  stroke-dasharray: 620px;
+  stroke-dashoffset: 620px;
+  animation: line-anim 2s ease forwards 0.9s;
+}
+.fifth {
+  stroke-dasharray: 620px;
+  stroke-dashoffset: 620px;
+  animation: line-anim 2s ease forwards 1.2s;
+}
+.sixth {
+  stroke-dasharray: 345px;
+  stroke-dashoffset: 345px;
+  animation: line-anim 2s ease forwards 1.5s;
+}
+.seventh {
+  stroke-dasharray: 315px;
+  stroke-dashoffset: 315px;
+  animation: line-anim 2s ease forwards 1.8s;
+}
+.eighth {
+  stroke-dasharray: 345px;
+  stroke-dashoffset: 345px;
+  animation: line-anim 2s ease forwards 2.1s;
+}
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: rgb(243, 18, 18);
+  }
+}
